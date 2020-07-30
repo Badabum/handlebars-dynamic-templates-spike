@@ -1,0 +1,200 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Work\ESW\Spikes\Spikes.Handlebars\bin\Release\netcoreapp3.1\b0bac0af-73c2-4911-879c-72daecc134ac
+// command took 1.35s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Work\ESW\Spikes\Spikes.Handlebars\bin\Release\netcoreapp3.1\b0bac0af-73c2-4911-879c-72daecc134ac
+// command took 12.03s and exited with 1
+// start dotnet build -c Release  --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Work\ESW\Spikes\Spikes.Handlebars\bin\Release\netcoreapp3.1\b0bac0af-73c2-4911-879c-72daecc134ac
+// command took 1.78s and exited with 0
+// ***** Done, took 00:00:26 (26.89 sec)   *****
+// Found 1 benchmarks:
+//   Benchmark.Compile: .NET Core 3.1(Runtime=.NET Core 3.1)
+
+// **************************
+// Benchmark: Benchmark.Compile: .NET Core 3.1(Runtime=.NET Core 3.1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b0bac0af-73c2-4911-879c-72daecc134ac.dll" --benchmarkName "Spikes.Handlebars.Benchmark.Compile" --job ".NET Core 3.1" --benchmarkId 0 in C:\Work\ESW\Spikes\Spikes.Handlebars\bin\Release\netcoreapp3.1\b0bac0af-73c2-4911-879c-72daecc134ac\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.2 (CoreCLR 4.700.20.6602, CoreFX 4.700.20.6702), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: .NET Core 3.1
+
+OverheadJitting  1: 1 op, 274900.00 ns, 274.9000 us/op
+WorkloadJitting  1: 1 op, 93177300.00 ns, 93.1773 ms/op
+
+WorkloadPilot    1: 2 op, 39149000.00 ns, 19.5745 ms/op
+WorkloadPilot    2: 3 op, 55248900.00 ns, 18.4163 ms/op
+WorkloadPilot    3: 4 op, 75842200.00 ns, 18.9606 ms/op
+WorkloadPilot    4: 5 op, 92169500.00 ns, 18.4339 ms/op
+WorkloadPilot    5: 6 op, 111135600.00 ns, 18.5226 ms/op
+WorkloadPilot    6: 7 op, 134038600.00 ns, 19.1484 ms/op
+WorkloadPilot    7: 8 op, 152205500.00 ns, 19.0257 ms/op
+WorkloadPilot    8: 9 op, 175681500.00 ns, 19.5202 ms/op
+WorkloadPilot    9: 10 op, 181598000.00 ns, 18.1598 ms/op
+WorkloadPilot   10: 11 op, 202153900.00 ns, 18.3776 ms/op
+WorkloadPilot   11: 12 op, 219746300.00 ns, 18.3122 ms/op
+WorkloadPilot   12: 13 op, 239966100.00 ns, 18.4589 ms/op
+WorkloadPilot   13: 14 op, 242230000.00 ns, 17.3021 ms/op
+WorkloadPilot   14: 15 op, 232067100.00 ns, 15.4711 ms/op
+WorkloadPilot   15: 16 op, 273220600.00 ns, 17.0763 ms/op
+WorkloadPilot   16: 32 op, 490375800.00 ns, 15.3242 ms/op
+WorkloadPilot   17: 64 op, 1067349200.00 ns, 16.6773 ms/op
+
+WorkloadWarmup   1: 64 op, 1062478700.00 ns, 16.6012 ms/op
+WorkloadWarmup   2: 64 op, 1053201700.00 ns, 16.4563 ms/op
+WorkloadWarmup   3: 64 op, 1028747300.00 ns, 16.0742 ms/op
+WorkloadWarmup   4: 64 op, 1041950000.00 ns, 16.2805 ms/op
+WorkloadWarmup   5: 64 op, 1063103300.00 ns, 16.6110 ms/op
+WorkloadWarmup   6: 64 op, 1011246500.00 ns, 15.8007 ms/op
+WorkloadWarmup   7: 64 op, 985538300.00 ns, 15.3990 ms/op
+WorkloadWarmup   8: 64 op, 1009105200.00 ns, 15.7673 ms/op
+WorkloadWarmup   9: 64 op, 1044636600.00 ns, 16.3224 ms/op
+WorkloadWarmup  10: 64 op, 1098804000.00 ns, 17.1688 ms/op
+WorkloadWarmup  11: 64 op, 1076969400.00 ns, 16.8276 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 999350800.00 ns, 15.6149 ms/op
+WorkloadActual   2: 64 op, 1058916300.00 ns, 16.5456 ms/op
+WorkloadActual   3: 64 op, 1064067600.00 ns, 16.6261 ms/op
+WorkloadActual   4: 64 op, 1061836500.00 ns, 16.5912 ms/op
+WorkloadActual   5: 64 op, 996568400.00 ns, 15.5714 ms/op
+WorkloadActual   6: 64 op, 1005326100.00 ns, 15.7082 ms/op
+WorkloadActual   7: 64 op, 1061887500.00 ns, 16.5920 ms/op
+WorkloadActual   8: 64 op, 1003613900.00 ns, 15.6815 ms/op
+WorkloadActual   9: 64 op, 1060263400.00 ns, 16.5666 ms/op
+WorkloadActual  10: 64 op, 1008632900.00 ns, 15.7599 ms/op
+WorkloadActual  11: 64 op, 1001018100.00 ns, 15.6409 ms/op
+WorkloadActual  12: 64 op, 999144800.00 ns, 15.6116 ms/op
+WorkloadActual  13: 64 op, 1053757500.00 ns, 16.4650 ms/op
+WorkloadActual  14: 64 op, 1059933400.00 ns, 16.5615 ms/op
+WorkloadActual  15: 64 op, 1043955400.00 ns, 16.3118 ms/op
+WorkloadActual  16: 64 op, 991834500.00 ns, 15.4974 ms/op
+WorkloadActual  17: 64 op, 1051185600.00 ns, 16.4248 ms/op
+WorkloadActual  18: 64 op, 1078314400.00 ns, 16.8487 ms/op
+WorkloadActual  19: 64 op, 1025002900.00 ns, 16.0157 ms/op
+WorkloadActual  20: 64 op, 974633900.00 ns, 15.2287 ms/op
+WorkloadActual  21: 64 op, 1064270400.00 ns, 16.6292 ms/op
+WorkloadActual  22: 64 op, 1057428500.00 ns, 16.5223 ms/op
+WorkloadActual  23: 64 op, 1045915400.00 ns, 16.3424 ms/op
+WorkloadActual  24: 64 op, 961593100.00 ns, 15.0249 ms/op
+WorkloadActual  25: 64 op, 1054701300.00 ns, 16.4797 ms/op
+WorkloadActual  26: 64 op, 1014145800.00 ns, 15.8460 ms/op
+WorkloadActual  27: 64 op, 1051156000.00 ns, 16.4243 ms/op
+WorkloadActual  28: 64 op, 975002600.00 ns, 15.2344 ms/op
+WorkloadActual  29: 64 op, 1063130400.00 ns, 16.6114 ms/op
+WorkloadActual  30: 64 op, 1057719400.00 ns, 16.5269 ms/op
+WorkloadActual  31: 64 op, 1014796000.00 ns, 15.8562 ms/op
+WorkloadActual  32: 64 op, 1058208000.00 ns, 16.5345 ms/op
+WorkloadActual  33: 64 op, 1065457600.00 ns, 16.6478 ms/op
+WorkloadActual  34: 64 op, 972538600.00 ns, 15.1959 ms/op
+WorkloadActual  35: 64 op, 1053603600.00 ns, 16.4626 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 999350800.00 ns, 15.6149 ms/op
+WorkloadResult   2: 64 op, 1058916300.00 ns, 16.5456 ms/op
+WorkloadResult   3: 64 op, 1064067600.00 ns, 16.6261 ms/op
+WorkloadResult   4: 64 op, 1061836500.00 ns, 16.5912 ms/op
+WorkloadResult   5: 64 op, 996568400.00 ns, 15.5714 ms/op
+WorkloadResult   6: 64 op, 1005326100.00 ns, 15.7082 ms/op
+WorkloadResult   7: 64 op, 1061887500.00 ns, 16.5920 ms/op
+WorkloadResult   8: 64 op, 1003613900.00 ns, 15.6815 ms/op
+WorkloadResult   9: 64 op, 1060263400.00 ns, 16.5666 ms/op
+WorkloadResult  10: 64 op, 1008632900.00 ns, 15.7599 ms/op
+WorkloadResult  11: 64 op, 1001018100.00 ns, 15.6409 ms/op
+WorkloadResult  12: 64 op, 999144800.00 ns, 15.6116 ms/op
+WorkloadResult  13: 64 op, 1053757500.00 ns, 16.4650 ms/op
+WorkloadResult  14: 64 op, 1059933400.00 ns, 16.5615 ms/op
+WorkloadResult  15: 64 op, 1043955400.00 ns, 16.3118 ms/op
+WorkloadResult  16: 64 op, 991834500.00 ns, 15.4974 ms/op
+WorkloadResult  17: 64 op, 1051185600.00 ns, 16.4248 ms/op
+WorkloadResult  18: 64 op, 1078314400.00 ns, 16.8487 ms/op
+WorkloadResult  19: 64 op, 1025002900.00 ns, 16.0157 ms/op
+WorkloadResult  20: 64 op, 974633900.00 ns, 15.2287 ms/op
+WorkloadResult  21: 64 op, 1064270400.00 ns, 16.6292 ms/op
+WorkloadResult  22: 64 op, 1057428500.00 ns, 16.5223 ms/op
+WorkloadResult  23: 64 op, 1045915400.00 ns, 16.3424 ms/op
+WorkloadResult  24: 64 op, 961593100.00 ns, 15.0249 ms/op
+WorkloadResult  25: 64 op, 1054701300.00 ns, 16.4797 ms/op
+WorkloadResult  26: 64 op, 1014145800.00 ns, 15.8460 ms/op
+WorkloadResult  27: 64 op, 1051156000.00 ns, 16.4243 ms/op
+WorkloadResult  28: 64 op, 975002600.00 ns, 15.2344 ms/op
+WorkloadResult  29: 64 op, 1063130400.00 ns, 16.6114 ms/op
+WorkloadResult  30: 64 op, 1057719400.00 ns, 16.5269 ms/op
+WorkloadResult  31: 64 op, 1014796000.00 ns, 15.8562 ms/op
+WorkloadResult  32: 64 op, 1058208000.00 ns, 16.5345 ms/op
+WorkloadResult  33: 64 op, 1065457600.00 ns, 16.6478 ms/op
+WorkloadResult  34: 64 op, 972538600.00 ns, 15.1959 ms/op
+WorkloadResult  35: 64 op, 1053603600.00 ns, 16.4626 ms/op
+
+// AfterAll
+// Benchmark Process 44504 has exited with code 0
+
+Mean = 16.120 ms, StdErr = 0.089 ms (0.55%), N = 35, StdDev = 0.527 ms
+Min = 15.025 ms, Q1 = 15.661 ms, Median = 16.424 ms, Q3 = 16.554 ms, Max = 16.849 ms
+IQR = 0.892 ms, LowerFence = 14.323 ms, UpperFence = 17.892 ms
+ConfidenceInterval = [15.799 ms; 16.441 ms] (CI 99.9%), Margin = 0.321 ms (1.99% of Mean)
+Skewness = -0.54, Kurtosis = 1.8, MValue = 2.95
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Spikes.Handlebars.Benchmark-report.csv
+  BenchmarkDotNet.Artifacts\results\Spikes.Handlebars.Benchmark-report-github.md
+  BenchmarkDotNet.Artifacts\results\Spikes.Handlebars.Benchmark-report.html
+  BenchmarkDotNet.Artifacts\results\Spikes.Handlebars.Benchmark-measurements.csv
+  BenchmarkDotNet.Artifacts\results\BuildPlots.R
+RPlotExporter couldn't find Rscript.exe in your PATH and no R_HOME environment variable is defined
+
+// * Detailed results *
+Benchmark.Compile: .NET Core 3.1(Runtime=.NET Core 3.1)
+Runtime = .NET Core 3.1.2 (CoreCLR 4.700.20.6602, CoreFX 4.700.20.6702), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 16.120 ms, StdErr = 0.089 ms (0.55%), N = 35, StdDev = 0.527 ms
+Min = 15.025 ms, Q1 = 15.661 ms, Median = 16.424 ms, Q3 = 16.554 ms, Max = 16.849 ms
+IQR = 0.892 ms, LowerFence = 14.323 ms, UpperFence = 17.892 ms
+ConfidenceInterval = [15.799 ms; 16.441 ms] (CI 99.9%), Margin = 0.321 ms (1.99% of Mean)
+Skewness = -0.54, Kurtosis = 1.8, MValue = 2.95
+-------------------- Histogram --------------------
+[14.918 ms ; 15.341 ms) | @@@@
+[15.341 ms ; 15.888 ms) | @@@@@@@@@@
+[15.888 ms ; 16.268 ms) | @
+[16.268 ms ; 16.691 ms) | @@@@@@@@@@@@@@@@@@@
+[16.691 ms ; 17.060 ms) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.18363.959 (1909/November2018Update/19H2)
+Intel Core i7-10510U CPU 1.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=3.1.102
+  [Host]        : .NET Core 3.1.2 (CoreCLR 4.700.20.6602, CoreFX 4.700.20.6702), X64 RyuJIT
+  .NET Core 3.1 : .NET Core 3.1.2 (CoreCLR 4.700.20.6602, CoreFX 4.700.20.6702), X64 RyuJIT
+
+Job=.NET Core 3.1  Runtime=.NET Core 3.1  
+
+|  Method |     Mean |    Error |   StdDev |   Median | Ratio |
+|-------- |---------:|---------:|---------:|---------:|------:|
+| Compile | 16.12 ms | 0.321 ms | 0.527 ms | 16.42 ms |  1.00 |
+
+// * Warnings *
+MultimodalDistribution
+  Benchmark.Compile: .NET Core 3.1 -> It seems that the distribution can have several modes (mValue = 2.95)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  Ratio  : Mean of the ratio distribution ([Current]/[Baseline])
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:52 (52.76 sec), executed benchmarks: 1
+
+Global total time: 00:01:19 (79.66 sec), executed benchmarks: 1
+// * Artifacts cleanup *
