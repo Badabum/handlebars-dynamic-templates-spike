@@ -1,13 +1,48 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using HandlebarsDotNet;
 
 namespace Spikes.Handlebars
 {
+    public class Page<T>
+    {
+        public Page(bool isFirst, bool isLast, ImmutableList<T> items)
+        {
+            IsFirst = isFirst;
+            IsLast = isLast;
+            Items = items;
+        }
+        public bool IsFirst { get; set; }
+        public bool IsLast { get; set; }
+        public ImmutableList<T> Items { get; set; }
+    }
     public static class LevisCompiler
     {
         public static void RegisteHelpers()
         {
+            HandlebarsBlockHelper pagination = (output, options, context, arguments) =>
+            {
+                // helper args format: collection pagesize optional<firstpage_size>
+                List<OrderInvoiceItem> enumerable = arguments[0] as List<OrderInvoiceItem>;
+                int pageSize = int.Parse(arguments[1] as string);
+                int firstPageSize = arguments.Length > 2 ? int.Parse(arguments[2] as string) : pageSize;
+
+                Page<OrderInvoiceItem> firstPage = new Page<OrderInvoiceItem>(
+                    true, false, enumerable.Take(firstPageSize).ToImmutableList());
+                ImmutableList<Page<OrderInvoiceItem>> pages = enumerable
+                    .Skip(firstPageSize)
+                    .Split(pageSize)
+                    .Select((p, index) => new Page<OrderInvoiceItem>(false, false, p))
+                    .ToImmutableList();
+                pages.Last().IsLast = true;
+                ImmutableList<Page<OrderInvoiceItem>> result = ImmutableList<Page<OrderInvoiceItem>>.Empty
+                    .Add(firstPage)
+                    .AddRange(pages);
+                result.ForEach(p => options.Template(output, p));
+            };
+            HandlebarsDotNet.Handlebars.RegisterHelper("paging", pagination);
             HandlebarsDotNet.Handlebars.RegisterHelper("date", (writer, context, args) =>
             {
                 DateTime dt = (DateTime)args[0];
