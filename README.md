@@ -3,6 +3,7 @@
 ### Supported features(list is not complete)
 
 Standard handlebars helpers, including:
+- Supports pagination using custom `{{paging <collection> pageSize optional<firstPageSize>}}` helper
 - Loops via `#each`
 - Value replacement `{{<propertyName>}}`
 - Conditionals `#if`
