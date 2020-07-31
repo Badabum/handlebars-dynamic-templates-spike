@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.IO;
-using System.Linq;
 
 namespace Spikes.Handlebars
 {
@@ -21,19 +18,6 @@ namespace Spikes.Handlebars
         public double ShippingTotal { get; set; }
         public double VatTotal { get; set; }
         public double Total { get; set; }
-        public ImmutableList<ImmutableList<OrderInvoiceItem>> Pages => MakePages();
-
-        private ImmutableList<ImmutableList<OrderInvoiceItem>> MakePages()
-        {
-            const int firstPageSize = 6;
-            const int otherPagesSize = 16;
-            ImmutableList<ImmutableList<OrderInvoiceItem>> items = ImmutableList<ImmutableList<OrderInvoiceItem>>.Empty;
-            items = items.Add(OrderInvoiceItems.Take(firstPageSize).ToImmutableList());
-            items = items.AddRange(OrderInvoiceItems
-                .Skip(firstPageSize)
-                .Split(otherPagesSize));
-            return items;
-        }
     }
 
     public class Address
